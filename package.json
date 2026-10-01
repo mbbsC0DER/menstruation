@@ -1,0 +1,16 @@
+{
+  "name": "menstruation",
+  "version": "1.0.5",
+  "description": "A description about the various phases in the femail menstrual cycle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "2factor-sdk": "^1.0.7"
+  }
+}
