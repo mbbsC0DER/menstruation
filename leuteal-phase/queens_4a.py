@@ -69,5 +69,11 @@ def solve_queen(size):
     print("Number of solutions:", number_of_solutions)
 
 
-n = int(input("Enter value of N: "))
-solve_queen(n)
+try:
+    n = int(input("Enter value of N: "))
+    if n > 0:
+        solve_queen(n)
+    else:
+        print("Enter a positive integer.")
+except ValueError:
+    print("Enter a valid integer.")
