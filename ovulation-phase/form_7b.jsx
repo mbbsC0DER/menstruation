@@ -1,4 +1,4 @@
-// PRACTICAL 7(b)   (number unclear in notebook)
+// PRACTICAL 7(b)
 // AIM: Create & validate the user form in React
 
 //   npm create vite@latest my-app -- --template react
@@ -11,7 +11,7 @@
 
 // ---- SETUP ----
 //   No extra packages. Replace src/App.jsx with the code below.
-//   Valid password example:  Abcdef1@x
+//   Password: at least 8 characters; no character-type requirements.
 
 import { useState } from "react";
 
@@ -35,17 +35,8 @@ function App() {
 
     if (!firstname) return alert("Invalid form, First Name can not be empty");
     if (!email) return alert("Invalid form, Email can not be empty");
-    // FIX: "< 8" matches the message (>= 8 characters allowed); notes had "<= 8"
     if (password.length < 8)
-      return alert("Invalid form, Password must contain greater than or equal 8 characters");
-    if (!/[A-Z]/.test(password))
-      return alert("Invalid form, 0 upper case character in password");
-    if (!/[a-z]/.test(password))
-      return alert("Invalid form, 0 lower case character in password");
-    if (!/[0-9]/.test(password))
-      return alert("Invalid form, 0 digit character in password");
-    if (!/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password))
-      return alert("Invalid form, 0 special character in password");
+      return alert("Password must be at least 8 characters long.");
 
     alert("Form submitted successfully");
   };

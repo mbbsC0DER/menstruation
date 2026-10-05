@@ -1,8 +1,8 @@
-// PRACTICAL 2
+// PRACTICAL 1(b)
 // AIM: Perform File (image / doc) upload operation by using MongoDB
 
 // ---- SETUP ----
-//   mkdir file-upload && cd file-upload
+//   cd upload_1b  (from ovulation-phase)
 //   npm init -y
 //   npm install express mongoose multer
 //

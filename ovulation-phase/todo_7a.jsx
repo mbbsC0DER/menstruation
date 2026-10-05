@@ -1,4 +1,4 @@
-// PRACTICAL 7
+// PRACTICAL 7(a)
 // AIM: Create TODO list by using React hooks with different components
 
 //   npm create vite@latest my-app -- --template react

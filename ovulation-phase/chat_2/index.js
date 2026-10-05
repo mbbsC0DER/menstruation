@@ -1,7 +1,5 @@
-// PRACTICAL (Chat app)
+// PRACTICAL 2
 // AIM: Create chat application by using Socket.IO
-
-// The source does not assign a practical number to this chat app.
 
 // ---- SETUP ----
 //   mkdir chat-app && cd chat-app

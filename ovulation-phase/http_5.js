@@ -5,7 +5,7 @@
 //   mkdir student-api && cd student-api
 //   npm init -y
 //   npm install express
-//   Run:   node http_methods_pract5.js
+//   Run:   node http_5.js
 // Test:
 //   GET    : curl http://localhost:3000/students
 //   GET 1  : curl http://localhost:3000/students/1

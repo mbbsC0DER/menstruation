@@ -26,7 +26,8 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const u = await User.findById(req.params.id);
-    res.json(u || { message: "User not found" });
+    if (!u) return res.status(404).json({ message: "User not found" });
+    res.json(u);
   } catch (err) {
     res.status(400).json({ message: "Invalid id" });
   }
@@ -36,7 +37,8 @@ router.get("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const u = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.json(u || { message: "User not found" });
+    if (!u) return res.status(404).json({ message: "User not found" });
+    res.json(u);
   } catch (err) {
     res.status(400).json({ message: "Invalid id" });
   }
@@ -46,7 +48,8 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const u = await User.findByIdAndDelete(req.params.id);
-    res.json(u ? { message: "User deleted successfully" } : { message: "User not found" });
+    if (!u) return res.status(404).json({ message: "User not found" });
+    res.json({ message: "User deleted successfully" });
   } catch (err) {
     res.status(400).json({ message: "Invalid id" });
   }

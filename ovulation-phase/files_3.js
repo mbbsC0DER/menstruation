@@ -6,7 +6,7 @@
 //   mkdir fs-demo && cd fs-demo
 //   Create a file named input.txt in the same folder with any text in it
 //   (e.g. "This is my input file").
-//   Run:   node file_operations_pract3.js
+//   Run:   node files_3.js
 //   Result: output.txt is created, and input.txt contents are printed.
 
 const fs = require("fs");

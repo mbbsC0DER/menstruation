@@ -6,13 +6,13 @@
 //   npm init -y
 //   npm install express mongoose body-parser
 //
-//   This practical REUSES from Practical 1:
+//   This practical REUSES from Practical 1(a):
 //     models/User.js
 //     routes/userRoutes.js
-//   Copy both into this folder (same structure), then create server.js below.
+//   Both files are already included in this folder.
 //
 //   Run:   node server.js
-//   Test:  POST/GET http://localhost:3000/users  (see Practical 1 curl examples)
+//   Test:  POST/GET http://localhost:3000/users  (see Practical 1(a) curl examples)
 //   Verify data in Mongo shell:  mongosh -> use studentDB -> db.users.find()
 
 const express = require("express");

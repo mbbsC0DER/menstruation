@@ -1,13 +1,13 @@
-// PRACTICAL 1
+// PRACTICAL 1(a)
 // AIM: Perform CRUD operations by using Express with MongoDB
 
 // ---- SETUP ----
-//   mkdir crud-app && cd crud-app
+//   cd crud_1a  (from ovulation-phase)
 //   npm init -y
 //   npm install express mongoose
 //
 // Folder structure:
-//   crud-app/
+//   crud_1a/
 //     models/User.js
 //     routes/userRoutes.js
 //     server.js
