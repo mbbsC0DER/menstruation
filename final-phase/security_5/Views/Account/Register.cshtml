@@ -1,0 +1,9 @@
+@model AccountForm
+@{ ViewData["Title"] = "Register"; }
+<h1>Register</h1>
+<form asp-action="Register" method="post">
+<div asp-validation-summary="All"></div>
+<label asp-for="Email"></label><input asp-for="Email" type="email" required />
+<label asp-for="Password"></label><input asp-for="Password" type="password" required />
+<button type="submit">Register</button></form>
+<a asp-controller="Home" asp-action="Index">Public page</a>

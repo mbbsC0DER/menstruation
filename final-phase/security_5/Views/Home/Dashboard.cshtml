@@ -1,0 +1,4 @@
+@{ ViewData["Title"] = "Dashboard"; }
+<h1>Security Dashboard</h1><p>Signed in as @User.Identity?.Name</p>
+<a asp-action="Index">Public page</a><a asp-action="Admin">Admin page</a>
+<form asp-controller="Account" asp-action="Logout" method="post"><button type="submit">Logout</button></form>

@@ -1,0 +1,20 @@
+@model PersonalDetails
+@{ ViewData["Title"] = "Personal Details"; }
+<h1>Personal Details</h1>
+<form asp-action="Index" method="post">
+<div asp-validation-summary="All"></div>
+<label asp-for="Name"></label><input asp-for="Name" required />
+<label asp-for="Contact"></label><input asp-for="Contact" type="tel" required />
+<label asp-for="Location"></label>
+<select asp-for="Location">
+@foreach (var city in new[] { "Thane", "Mumbai", "Dombivali", "Kalyan", "Andheri", "Badlapur", "Karjat", "Dadar" })
+{ <option value="@city">@city</option> }
+</select>
+<label>Gender</label>
+<label><input asp-for="Gender" type="radio" value="Male" required /> Male</label>
+<label><input asp-for="Gender" type="radio" value="Female" /> Female</label>
+<label>Education</label>
+@foreach (var choice in new[] { "SSC", "HSC", "Graduate" })
+{ <label><input type="checkbox" name="Education" value="@choice" checked="@(Model.Education.Contains(choice))" /> @choice</label> }
+<button type="submit">Submit</button>
+</form>

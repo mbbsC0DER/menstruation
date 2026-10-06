@@ -1,0 +1,10 @@
+@model Student
+@{ ViewData["Title"] = Model.Id == 0 ? "Add Student" : "Edit Student"; }
+<h1>@ViewData["Title"]</h1>
+<form asp-action="@(Model.Id == 0 ? "Create" : "Edit")" asp-route-id="@Model.Id" method="post">
+<div asp-validation-summary="All"></div><input asp-for="Id" type="hidden" />
+<label asp-for="Name"></label><input asp-for="Name" required />
+<label asp-for="Email"></label><input asp-for="Email" type="email" required />
+<label asp-for="Course"></label><input asp-for="Course" required />
+<label asp-for="Marks"></label><input asp-for="Marks" type="number" min="0" max="100" />
+<button type="submit">Save</button></form><a asp-action="Index">Back</a>

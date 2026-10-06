@@ -1,0 +1,7 @@
+@model PersonalDetails
+@{ ViewData["Title"] = "Submitted Details"; }
+<h1>Submitted Details</h1>
+<p>My name is @Model.Name</p><p>My contact number is @Model.Contact</p>
+<p>My location is @Model.Location</p><p>My gender is @Model.Gender</p>
+<p>My education details are @string.Join(", ", Model.Education)</p>
+<a asp-action="Index">Enter another record</a>

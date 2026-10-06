@@ -1,0 +1,7 @@
+@model Student[]
+@{ ViewData["Title"] = "Students"; }
+<h1>Student Information</h1>
+<table><tr><th>Roll number</th><th>Name</th><th>Course</th><th>Details</th></tr>
+@foreach (var s in Model)
+{ <tr><td>@s.Id</td><td>@s.Name</td><td>@s.Course</td><td><a asp-action="Details" asp-route-id="@s.Id">Details</a></td></tr> }
+</table>

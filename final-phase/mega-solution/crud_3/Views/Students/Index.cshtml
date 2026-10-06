@@ -1,0 +1,14 @@
+@model List<Student>
+@{ ViewData["Title"] = "Student CRUD"; }
+<h1>Student CRUD</h1><a asp-action="Create">Add student</a>
+<table><tr><th>ID</th><th>Name</th><th>Course</th><th>Actions</th></tr>
+@foreach (var s in Model)
+{
+<tr><td>@s.Id</td><td>@s.Name</td><td>@s.Course</td><td>
+<a asp-action="Details" asp-route-id="@s.Id">Details</a>
+<a asp-action="Edit" asp-route-id="@s.Id">Edit</a>
+<form asp-action="Delete" asp-route-id="@s.Id" method="post" style="display:inline">
+<button type="submit">Delete</button></form>
+</td></tr>
+}
+</table>

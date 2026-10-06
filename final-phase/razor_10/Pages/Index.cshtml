@@ -1,0 +1,19 @@
+@page
+@model IndexModel
+@{ ViewData["Title"] = "Razor Student Form"; }
+<h1>Razor Pages and Tag Helpers</h1>
+<form method="post">
+<div asp-validation-summary="All"></div>
+<label asp-for="Student.Id">Roll number</label><input asp-for="Student.Id" type="number" min="1" required />
+<label asp-for="Student.Name"></label><input asp-for="Student.Name" required /><span asp-validation-for="Student.Name"></span>
+<label asp-for="Student.Email"></label><input asp-for="Student.Email" type="email" required /><span asp-validation-for="Student.Email"></span>
+<label asp-for="Student.Course"></label><select asp-for="Student.Course"><option value="">Select</option><option>BCA</option><option>BSc IT</option><option>BSc CS</option></select>
+<span asp-validation-for="Student.Course"></span>
+<label asp-for="Student.Marks"></label><input asp-for="Student.Marks" type="number" min="0" max="100" />
+<button type="submit">Submit</button></form>
+@if (Model.Submitted)
+{
+<h2>Submitted Student</h2><p>Roll number: @Model.Student.Id</p><p>Name: @Model.Student.Name</p>
+<p>Email: @Model.Student.Email</p><p>Course: @Model.Student.Course</p><p>Marks: @Model.Student.Marks</p>
+}
+<a asp-page="/Index">Clear form</a>

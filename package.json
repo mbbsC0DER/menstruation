@@ -1,6 +1,6 @@
 {
   "name": "menstruation",
-  "version": "1.0.9",
+  "version": "2.0.1",
   "description": "A description about the various phases in the femail menstrual cycle",
   "main": "index.js",
   "scripts": {

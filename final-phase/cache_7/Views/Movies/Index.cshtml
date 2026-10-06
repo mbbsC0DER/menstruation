@@ -1,0 +1,12 @@
+@model MoviePage
+@{ ViewData["Title"] = "Movie Cache"; }
+<h1>Movie Ticket Booking</h1>
+<form method="get" asp-action="Index">
+<select name="theatre">
+@foreach (var name in new[] { "IMAX", "PVR", "MOVIEMAX" })
+{ <option value="@name" selected="@(name == Model.Theatre)">@name</option> }
+</select><button type="submit">Show movies</button></form>
+<h2>@Model.Theatre</h2><p>Source: @(Model.FromCache ? "Reading from cache" : "Fresh data")</p>
+<p>Data created (UTC): @Model.Data.CreatedAt.ToString("O")</p>
+<ul>@foreach (var movie in Model.Data.Movies) { <li>@movie</li> }</ul>
+<p>Refresh within 30 seconds: same time and cached data. Refresh after expiry: a new time.</p>
